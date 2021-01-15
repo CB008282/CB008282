@@ -1,0 +1,197 @@
+/* main styles for the page*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+    
+header{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.5em 0 ;
+    font-size: 1em;
+    text-align: left;
+}
+@media only screen and (max-width: 790px){
+    #TheManufacturer {
+        min-width: 240px;
+        widows: 100%;
+        margin: 0 auto;
+        background: #f2f2f2;
+    }
+
+    main{
+        padding: 1em ;
+        margin: 0;
+    }
+    footer {
+        background:lightblue;
+        padding: 1em;
+        color: black;
+    }
+
+
+    /* main nav styles */
+    #mainNav{
+        position: sticky;
+        top: 0;
+    }
+
+    #mainNav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: green;
+        display: flex;
+        flex-flow: row wrap;  
+    }
+    #mainNav li{
+        flex-grow: 1;
+        width: auto;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    #mainNav a{
+        background-size: 40px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 50px;
+        line-height: 50px;
+        text-decoration: none;
+        display: block;
+        color: rgb(17,17,17);
+        text-decoration: none;
+    }
+
+    #mainImg{
+        width: 100% ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    .Itemimg{
+        width: 400px ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    .compimg{
+        width: 400px ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+
+    /* paragraph formatting using felxbox */
+    #TheManufacturer {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .box{
+        color:black;
+        padding: 1em;
+        margin: 1em;
+        border: 1em white;
+        background-color: skyblue;
+    }
+
+    #Item{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .itembox{
+        color: white;
+        padding: 1em;
+        margin: 1em;
+        border: 1em white ;
+        background-color: rgb(17,17,17);  
+    }
+
+}
+
+/* Destop sized screen*/
+@media only screen and (min-width: 790px){
+    #mainNav{
+        position: sticky;
+        top: 0;
+    }
+
+    #mainNav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: green;
+        display: flex;
+        flex-flow: row wrap;  
+    }
+    #mainNav li{
+        flex-grow: 1;
+        width: auto;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    #mainNav a{
+        background-size: 40px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 50px;
+        line-height: 50px;
+        text-decoration: none;
+        display: block;
+        color: rgb(17,17,17);
+        text-decoration: none;
+    }
+
+    #mainImg{
+        width: 100% ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    .Itemimg{
+        width: 400px ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+    .compimg{
+        width: 400px ;
+        height: 200px;
+        border: 0.1em rgb(17,17,17) solid;
+    }
+
+    #TheManufacturer {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .box{
+        color:black;
+        padding: 1em;
+        margin: 1em;
+        border: 1em white;
+        background-color: skyblue;
+    }
+
+    #Item{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .itembox{
+        color: white;
+        padding: 1em;
+        margin: 1em;
+        border: 1em white ;
+        background-color: rgb(17,17,17);  
+    }
+    #TheManufacturer {
+        min-width: 240px;
+        widows: 100%;
+        margin: 0 auto;
+        background: #f2f2f2;
+    }
+
+    main{
+        padding: 1em ;
+        margin: 0;
+    }
+    footer {
+        background:lightblue;
+        padding: 1em;
+        color: black;
+    }
+}
