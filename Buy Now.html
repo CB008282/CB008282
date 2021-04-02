@@ -14,74 +14,79 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="msapplication-config" content="/Images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script src="Programs/Features to Buynow.js" async></script>
 </head>
 <body>
-    <nav id="mainNav">
-        <ul>
-            <li> <a href="index.html"><span class="navText"></span>Home</a></li>
-            <li> <a href="Eco-Friendly Products.html"><span class="navText"></span>Eco-Friendly Products</a> </li>
-            <li><a href="Eco-Friendly Manufacturer.html"><span class="navText"></span>Eco-Friendly Manufacturer</a></li>
-            <li><a href="Buy Now.html"><span class="navText"></span>Buy Now</a></li>
-            <li> <a href="Contact Us.html"><span class="navText"></span>Contact Us</a> </li>
-        </ul>
-    </nav>
-    <br>
-    <main>
-        <form><!-- Detail for the online transfer-->
-            <fieldset id="Bank details">
-                <legend>Personal Details</legend>
-                <label>Cards Name</label>
-                <input type="text" name="fname" id="fname2" size="15" maxlength="25" required="required">
-                <br>
-                <br>
-                <label>Email</label>
-                <input type="email" name="email" id="email" size="15" maxlength="25" required="required">
-                <br>
-                <br>
-                <label>Expire date on the card</label>
-                <input type="date" name="date" id="date" required="required">
-                <br>
-                <br>
-                <label>Card Number</label>
-                <input type="text" name="Card Number" id="Card Number" size="16" maxlength="25" required="required">
-                <br>
-                <br>
-                <label>CV number (Cards back Number)</label>
-                <input type="text" name="CV number" id="CV number" size="3" maxlength="25" required="required">
-                <br>
-                <br>
-                <label>Select type of the Card</label> <!-- for the type of the card they have like VISA etc.-->
-                                <br>
-                                <select name="dropdwn" id="dropdwn" size="4">
-                                    <option>VISA</option>
-                                    <option>MASTER CARD</option>
-                                    <option>AMERICAN EXPRESS</option>
-                                    <option>PAY PAL</option>
-                                </select>
-                <br>
-                <br>
-                <button>Pay now</button>
-            <button>Confirm and Save</button>
-            <button>Cancel</button>
-            </fieldset>
-        </form> <!-- carts for the item the user wants to buy-->
-        <section id="Cart list">
-            <ol>
-                <li>Tooth brush ($5.99)</li>
-                <ol>
-                    <li>Wood</li>
-                    <li>Nylon bristles</li>
-                </ol>
-                <li>Tooth brush ($5.99)</li>
-                <ol>
-                    <li>Wood</li>
-                    <li>Nylon bristles</li>
-                </ol>    
-            </ol>
-        </section>
-    </main>
-    <br>
-    <br>
+<nav id="mainNav">
+    <ul>
+        <li> <a href="index.html"><span class="navText"></span>Home</a></li>
+        <li> <a href="Eco-Friendly Products.html"><span class="navText"></span>Eco-Friendly Products</a> </li>
+        <li><a href="Eco-Friendly Manufacturer.html"><span class="navText"></span>Eco-Friendly Manufacturer</a></li>
+        <li><a href="Buy Now.html"><span class="navText"></span>Buy Now</a></li>
+        <li> <a href="Contact Us.html"><span class="navText"></span>Contact Us</a> </li>
+    </ul>
+</nav>
+<br>
+<section class="container content-section">
+    <h2 class="section-header">Select Manufacturer</h2>
+    <select  id=" Manufacturer" onclick="Addorder">
+        <option value="Eco-Products SL">Eco-Products SL</option>
+        <option value="Ecoware Lanka">Ecoware Lanka</option>
+        <option value="Trickledown">Trickledown</option>
+        <option value="BacktoEarth">BacktoEarth</option>
+    </select>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Bags</span>
+            <img class="shop-item-image" src="Images/Bags.jpg" width="100" height="100">
+            <div class="shop-item-details">
+                <span class="shop-item-price">Rs.1000</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Plates</span>
+            <img class="shop-item-image" src="Images/Plates.jpg" width="100" height="100">
+            <div class="shop-item-details">
+                <span class="shop-item-price">Rs.2000</span>
+                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Mugs</span>
+            <img class="shop-item-image" src="Images/Mugs.jfif" width="100" height="100">
+            <div class="shop-item-details">
+                <span class="shop-item-price">Rs.2500</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Soap</span>
+            <img class="shop-item-image" src="Images/Soap.jfif" width="100" height="100">
+            <div class="shop-item-details">
+                <span class="shop-item-price">Rs.800</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container content-section">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">Rs.0</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    <button class="btn btn-primary btn-favourite" type="button">ADD FAVOURITE</button>
+    <button class="btn btn-primary btn-Royalty" type="button">Check Royalty</button>
+</section>
     <footer>
         <fieldset>
             <p> &copy; Eco-Friendly 2020. All rights Reserved,  &reg; APIIT</p>
