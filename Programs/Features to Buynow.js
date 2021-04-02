@@ -22,6 +22,16 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
+    var addToCartSize = document.getElementsByClassName('shop-item-button-Size')
+    for (var i = 0; i < addToCartSize.length; i++) {
+        var button = addToCartSize[i]
+        button.addEventListener('click', addToCartSizeClicked)
+    }
+    var addToCartExtra = document.getElementsByClassName('shop-item-button-Extra')
+    for (var i = 0; i < addToCartExtra.length; i++) {
+        var button = addToCartExtra[i]
+        button.addEventListener('click', addToCartExtraClicked)
+    }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
     document.getElementsByClassName('btn-favourite')[0].addEventListener('click', favouriteClicked)
@@ -52,11 +62,14 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 function RoyaltyPoints(){
-    var input = quantityChanged
-    if (input > 3) {
-        alert ('Congratulation You won 20 Royalty Points')
+    var input = cartRow.getElementsByClassName('cart-quantity-input')[0].innerText
+        if (input < 3) {
+        alert('Congratualtion you have won 20 points')
     }
+        alert ('Please select more then three Item to win 20 points')
 }
+
+
 
 function addToCartClicked(event) {
     var button = event.target
@@ -65,6 +78,22 @@ function addToCartClicked(event) {
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)
+    updateCartTotal()
+}
+function addToCartSizeClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title-Size')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price-Size')[0].innerText
+    addItemToCart(title, price)
+    updateCartTotal()
+}
+function addToCartExtraClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title-Extra')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price-Extra')[0].innerText
+    addItemToCart(title, price)
     updateCartTotal()
 }
 
@@ -121,4 +150,3 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = 'Rs.' + total
 }
-
